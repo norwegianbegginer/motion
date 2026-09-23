@@ -20,7 +20,7 @@ npm run build
 
 ## GitHub Pages
 
-Push the repository to GitHub with the default branch named `main`, then enable Pages using **Settings → Pages → Source: GitHub Actions**. The included workflow builds with the repository subpath as Vite’s base URL and deploys the static site automatically. Webcam access works on the resulting HTTPS URL. If using a custom domain, change the workflow build command to use `--base=/`.
+Enable Pages using **Settings → Pages → Build and deployment → Source: GitHub Actions**. The included workflow runs on `master`, builds with the repository subpath as Vite’s base URL, and deploys the static site automatically. For this repository, the expected URL is `https://norwegianbegginer.github.io/motion/`. Webcam access works on the resulting HTTPS URL. If using a custom domain, set `VITE_BASE_PATH=/` in the workflow.
 
 The app uses Google MediaPipe Tasks Vision with the full Pose Landmarker model stored at `public/models/pose_landmarker_full.task`. The model produces 33 body landmarks; the app maps the required shoulders, hips, knees, ankles, and nose into its normalized pose layer. It tries the MediaPipe GPU delegate first and falls back to the CPU delegate.
 
