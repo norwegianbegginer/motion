@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Vite/build output
+dist/
+.vite/
+coverage/
+
+# TypeScript incremental build metadata
+*.tsbuildinfo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and local tooling output
+*.log
+*.local
+
+# Editor/OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Temporary project work
+work/
+outputs/

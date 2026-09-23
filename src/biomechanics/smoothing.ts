@@ -1,0 +1,3 @@
+import type { Landmark, LandmarkName } from "../pose/types";
+export interface LandmarkSmoother { update(input: Partial<Record<LandmarkName,Landmark>>): Partial<Record<LandmarkName,Landmark>>; reset(): void; }
+export function createEmaSmoother(alpha=0.35): LandmarkSmoother { let previous: Partial<Record<LandmarkName,Landmark>>={}; return { update(input) { const out={...input}; for (const [key,current] of Object.entries(input) as [LandmarkName,Landmark][]) { const old=previous[key]; if(old) out[key]={...current,x:alpha*current.x+(1-alpha)*old.x,y:alpha*current.y+(1-alpha)*old.y}; } previous=out; return out; }, reset(){previous={};} }; }

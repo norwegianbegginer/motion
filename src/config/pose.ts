@@ -1,0 +1,2 @@
+export const MIN_LANDMARK_CONFIDENCE = 0.5;
+export const DEFAULT_SMOOTHING_ALPHA = 0.35;

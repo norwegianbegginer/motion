@@ -1,0 +1,3 @@
+import { describe, expect, it } from "vitest"; import { SquatEngine } from "../src/exercises/squat/squatEngine";
+const run=(angles:number[])=>{const e=new SquatEngine();let t=0;for(const a of angles){t+=100;e.update(a,t)}return e.update(null,t)};
+describe("SquatEngine",()=>{it("counts a complete squat once",()=>expect(run([170,165,145,130,110,95,90,105,125,145,162,168]).reps).toBe(1));it("does not count threshold noise",()=>expect(run([170,141,139,142,138,141,139]).reps).toBe(0));it("counts two reps",()=>expect(run([170,165,145,130,110,95,90,105,125,145,162,168,170,165,145,130,110,95,90,105,125,145,162,168]).reps).toBe(2));it("requires minimum duration",()=>expect(run([170,145,95,130,165]).reps).toBe(0));});

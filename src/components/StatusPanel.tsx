@@ -1,0 +1,1 @@
+export function StatusPanel({message,provider,mode}:{message:string;provider:string;mode:string}){return <div className="status"><div><b>Inference:</b> {provider}</div><div><b>Mode:</b> {mode}</div><p>{message}</p></div>}
