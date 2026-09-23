@@ -28,4 +28,4 @@ Webcam access requires localhost or HTTPS. Frames are processed locally and are 
 
 If the model cannot initialize, the app falls back visibly to `MOCK MODE`; mock landmarks are synthetic and are only for testing the UI and squat engine.
 
-This is a prototype, not a medical device. Pose estimates may be inaccurate; camera position affects measurements; 2D joint angles are not clinical goniometry; and feedback is deterministic prototype logic.
+This is a prototype, not a medical device. Pose estimates may be inaccurate; camera position affects measurements; 2D joint angles are not clinical goniometry; and feedback is deterministic prototype logic..
